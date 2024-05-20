@@ -1,0 +1,79 @@
+/*.customMarker-container{*/
+/*    background-color: white;*/
+/*    width: 160px;*/
+/*    height: auto;*/
+/*    padding:12px;*/
+/*    border-radius:12px;*/
+/*    cursor:pointer;*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+
+/*}*/
+
+/*.customMarker-name-container{*/
+/*    height:auto;*/
+/*    display:flex;*/
+/*    align-items:center;*/
+/*    justify-content:space-between;*/
+/*}*/
+/*.customMarker-name{*/
+/*    margin:0;*/
+/*    font-width:600;*/
+/*    font-size:16px;*/
+/*}*/
+
+/*.customMarker-gu-container{*/
+/*    width:auto;*/
+/*    border:1px solid #43ca3b;*/
+/*    border-radius:4px;*/
+/*    padding: 1px 4px;*/
+/*}*/
+/*.customMarker-gu{*/
+/*    margin:0;*/
+/*    font-size:6px;*/
+/*    font-weight:400;*/
+/*    color: #43ca3b;*/
+/*    display: block;*/
+/*}*/
+
+/*!* bottom part of customMarker*!*/
+/*.customMarker-bottom-container{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    align-items: center;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: space-between;*/
+/*}*/
+/*.custoMarker-bottom-left-container{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+
+/*}*/
+
+/*.customMarker-mainFood{*/
+/*    font-width:600;*/
+/*    font-size:12px;*/
+/*    margin: 0 0 7px;*/
+/*    color: #7a7a7a;*/
+
+/*}*/
+/*.customMarker-emotion{*/
+/*    font-size:16px;*/
+
+/*}*/
+
+/*.customMarker-food-container{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    margin: 12px 3px 0 0;*/
+
+/*}*/
+/*.customMarker-food{*/
+/*    margin: 0 0 4px;*/
+/*    font-size: 12px;*/
+/*    font-weight: 500;*/
+/*    color: #c4c4c4;*/
+
+/*}*/

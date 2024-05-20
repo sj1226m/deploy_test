@@ -1,0 +1,30 @@
+.searchBar{
+    margin-right:3vw;
+}
+
+.searchBar input {
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #d9d9d9;
+    padding: 14px;
+    width:300px;
+}
+
+.mapSearchBar-clear-button{
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 14px;
+    background-color: #fbfbfb;
+    cursor:pointer;
+    margin-left:1vw;
+}
+@media screen and (max-width:1200px) {
+    .searchBar input{
+        width:200px;
+    }
+}
+@media screen and (max-width:768px) {
+    .searchBar input{
+        width:60vw;
+    }
+}

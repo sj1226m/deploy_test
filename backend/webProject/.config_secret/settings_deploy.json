@@ -1,0 +1,10 @@
+{
+    "django":{
+        "allowed_hosts":[
+            ".ap-northeast-2.compute.amazonaws.com"
+        ],
+        "databases":{
+            
+        }
+    }
+}

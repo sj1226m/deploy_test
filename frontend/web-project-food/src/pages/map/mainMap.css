@@ -1,0 +1,151 @@
+
+.map-main{
+    display: flex;
+    flex-direction:row;
+    margin-left: 3vw;
+    margin-top: 2vh;
+}
+
+.map-place-list-clicked{
+    display:none;
+    flex-direction:row;
+    margin-left:5vw;
+    margin-top:5vh;
+}
+
+.map-place-list-text{
+    font-size:36px;
+    margin-left: 1vw;
+    cursor:pointer;
+
+}
+.map-place-list-text-clicked{
+    display:none;
+}
+.map-heart-default{
+    font-size:36px;
+    color : white;
+
+}
+.map-heart-selected{
+    font-size:36px;
+    color: red;
+}
+
+.map-selected-place-selected{
+    display: none;
+
+}
+
+.map-place-list{
+    display:flex;
+    flex-direction:column;
+    margin-left:8vw;
+    margin-top:0px;
+
+}
+.map-place-list-antd{
+    display:flex;
+    flex-direction:row;
+    width:100vw;
+    margin-top:1vh;
+
+
+}
+.map-heart-container{
+    display:flex;
+    flex-direction:column;
+}
+.map-place-list-heart{
+    color : white;
+    font-size: 32px;
+    margin-right: 1vw;
+}
+.map-heart-text{
+    font-size: 20px;
+    margin: 20px;
+}
+.map-place-title{
+    font-size: 32px;
+    margin-right: 2vw;
+    cursor :pointer;
+}
+.map-place-description{
+    font-size:18px;
+    color :slategrey;
+}
+.map-marker-container{
+    min-width:150px;
+}
+.map-marker-exit-icon{
+    position: absolute;
+    right:5px;
+    top:5px;
+    cursor:pointer;
+    cursor: pointer;
+}
+.map-marker-text{
+    padding :5px;
+}
+.overlay{
+    padding :-100px;
+}
+.map-food-menu-0{
+    position:absolute;
+    top:19vh;
+    left: 73vw;
+}
+.map-food-menu-1{
+    position:absolute;
+    top:36vh;
+    left: 73vw;
+}
+.map-food-menu-2{
+    position:absolute;
+    top:60vh;
+    left: 73vw;
+}
+.map-food-menu-3{
+    position:absolute;
+    top:30vh;
+    left: 73vw;
+}
+.map-kakaoMap{
+    width: 44vw;
+    height: 70vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    border: 10px solid rgb(204, 204, 204);
+    border-radius: 20px;
+}
+.myMap-tab {
+    margin-left: 4vw;
+}
+
+
+@media screen and (max-width: 768px){
+    .map-main{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width: 100%;
+        margin:0;
+
+    }
+    .map-kakaoMap{
+        width:70vw;
+        height:50vh;
+        margin:0;
+    }
+    .map-place-list{
+        margin:0;
+        padding:30px;
+    }
+    .map-heart-text{
+        margin:0;
+
+    }
+
+}
+
+

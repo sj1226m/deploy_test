@@ -1,0 +1,83 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-login-button{
+    margin-top:10vh;
+
+}
+
+.home-logout-text{
+    font-size : 24px;
+    color : grey;
+    cursor:pointer;
+}
+.home-logout-text:hover {
+    color : #5cAEE3E6;
+}
+.home-title1-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+.home-title1{
+    font-size:48px;
+    display: flex;
+    justify-content: center;
+    margin-top:8vh;
+}
+
+
+.home-carousel{
+    width: 70vw;
+    margin-top: 18vh;
+    opacity: 0;
+    /*visibility: hidden;*/
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+.home-carousel2{
+    width: 70vw;
+    /*margin-top:-6vh;*/
+    margin-top: 18vh;
+    opacity: 0;
+    /*visibility: hidden;*/
+    display:none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+ .home-carousel.place,
+.home-carousel2.place {
+    opacity: 1;
+    /*visibility: visible;*/
+     display: inline-block;
+}
+
+.home-next-button{
+    font-size:64px;
+    margin-top:1vh;
+    cursor :pointer;
+}
+@media (max-width: 600px) {
+    .home-title1 {
+        font-size: 24px;
+    }
+    .home-carousel{
+        margin-top:15vh;
+    }
+    .home-carousel2{
+        margin-top:15vh;
+    }
+    .home-next-button{
+        font-size:48px;
+        margin-top:5vh;
+    }
+
+;
+}
+

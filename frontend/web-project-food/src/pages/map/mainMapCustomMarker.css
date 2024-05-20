@@ -1,0 +1,164 @@
+.customMarker-container{
+    background-color: white;
+    width: 160px;
+    height: auto;
+    padding:12px;
+    border-radius:12px;
+    cursor:pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.customMarker-name-container{
+    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.customMarker-name{
+    font-size: 17px;
+}
+.customMarker-name.long{
+    font-size:12px;
+
+}
+.customMarker-top-container{
+    display:flex;
+    flex-direction:column;
+    align-items: flex-end;
+}
+.customMarker-btn-container{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    align-content:space-evenly;
+}
+.customMarker-close-button {
+    background-color: #fe5f57;
+    border: none;
+    border-radius: 50%;
+    width: 10px; /* 크기를 12px로 줄였습니다. */
+    height: 10px; /* 크기를 12px로 줄였습니다. */
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    margin-bottom:1vh;
+    margin-left:0.5vw;
+}
+.customMarker-kakao-button{
+    background-color: #febd2d;
+    border: none;
+    border-radius: 50%;
+    width: 10px; /* 크기를 12px로 줄였습니다. */
+    height: 10px; /* 크기를 12px로 줄였습니다. */
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    margin-bottom:1vh;
+    margin-left:0.5vw;
+}
+
+
+
+.customMarker-close-icon {
+    font-size: 8px; /* 아이콘 크기를 12px로 조정합니다. */
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.customMarker-close-button:hover .customMarker-close-icon {
+    opacity: 1;
+}
+.customMarker-kakao-icon {
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 아이콘을 정확히 가운데로 이동 */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.customMarker-kakao-button:hover .customMarker-kakao-icon {
+    opacity: 1;
+}
+
+.customMarker-kakao-icon::before {
+    content: "-";
+}
+
+
+.customMarker-gu-container{
+    width:auto;
+    border:1px solid #5CAEE3E6;
+    border-radius:4px;
+    padding: 1px 4px;
+}
+.customMarker-gu{
+    margin:0;
+    font-size:8px;
+    font-weight:400;
+    color: #5CAEE3E6;
+    display: block;
+    cursor: help;
+}
+
+/* bottom part of customMarker*/
+.customMarker-bottom-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.customMarker-bottom-left-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.customMarker-mainFood{
+    font-width:600;
+    font-size:12px;
+    margin: 0 0 7px;
+    color: #7a7a7a;
+
+}
+.customMarker-emotion{
+    font-size:36px !important;
+    /*margin-right:0.7vw;*/
+
+}
+
+.customMarker-food-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left:0.3vw;
+
+}
+.customMarker-food{
+    margin: 0 0 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #c4c4c4;
+
+}
+
+@media screen and (max-width:768px){
+    .customMarker-kakao-button{
+        display:none;
+        width: 16px; /* 크기를 12px로 줄였습니다. */
+        height: 16px; /* 크기를 12px로 줄였습니다. */
+    }
+}

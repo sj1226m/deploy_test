@@ -1,0 +1,30 @@
+.button-carousel{
+    display:flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/*쓸지 안쓸지 아직 마확정임*/
+
+.logo{
+    width:70px;
+    height:70px;
+    cursor:pointer;
+}
+.button-carousel-text{
+    font-size:20px;
+    opacity:0.3;
+}
+.button-carousel-text .active{
+    opacity:1;
+}
+.button-carousel.active{
+    opacity:1;
+}
+
+@media (max-width: 600px){
+    .logo{
+        width:36px;
+        height: 36px;
+    }
+}

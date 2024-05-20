@@ -1,0 +1,50 @@
+/* EmotionCarousel.css */
+.circle-button,
+circle-button2{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    transition: background-color 0.3s; /* 호버 시 배경색 변경 애니메이션 */
+
+}
+.circle-button2{
+    opacity:0.3;
+}
+
+.circle-button:hover {
+    background-color:rgb(192, 222, 242); /* 마우스 호버 시 배경색 변경 */
+    animation: rotateInfinite 2s infinite;
+}
+@keyframes rotateInfinite {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circle-button.active {
+    background-color: rgba(80, 137, 208, 0.9);
+}
+
+.circle-button2.active {
+  opacity:1;
+}
+
+@media (max-width: 600px) {
+    .circle-button{
+        width:36px;
+        height: 36px;
+    }
+    .button-carousel-text{
+        font-size:12px !important;
+    }
+
+}
