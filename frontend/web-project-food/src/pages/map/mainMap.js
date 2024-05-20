@@ -33,6 +33,7 @@ function MainMap() {
         console.log(error);
       });
     setText(text.filter((text) => text.gu === placeInfo.id));
+    console.log(placeInfo.id)
 
     axios
       .get(`http://127.0.0.1:8000/put_data/${getUsername}`, {

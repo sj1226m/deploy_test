@@ -1,6 +1,7 @@
 {
     "django":{
         "allowed_hosts":[
+            "localhost",
             ".ap-northeast-2.compute.amazonaws.com"
         ],
         "databases":{

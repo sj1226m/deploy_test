@@ -1,23 +1,18 @@
 import os
-from pathlib import Path
+import sys
+import json
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT_DIR = os.path.dirname(BASE_DIR)
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
+CONFIG_SECRET_DIR = os.path.join(ROOT_DIR, 'webProject/.config_secret')
+CONFIG_SECRET_COMMON_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_common.json')
+CONFIG_SECRET_DEBUG_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_debug.json')
+CONFIG_SECRET_DEPLOY_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_deploy.json')
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!%vtan91!z#eeq3u95-pprls6#lnp^d9q+$zc7g292ylurnnn5'
+config_secret_common = json.loads(open(CONFIG_SECRET_COMMON_FILE).read())
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
-# CSRF_TRUSTED_ORIGINS=['https://5688-121-138-70-79.ngrok-free.app']
-#for using ngrok. 나중에 수정해주어야할듯..
-
-# Application definition
+SECRET_KEY = config_secret_common["django"]["secret_key"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -44,15 +39,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# 기준이 되는 URL 경로 (프로젝트 생성 시)
 ROOT_URLCONF = 'webProject.urls'
-
-TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,23 +57,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'webProject.wsgi.application'
-
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
-# Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-
-# python manage.py createsuperuser로 만드는 admin 계정의 비밀번호가 아래 규칙을 따름
 AUTH_PASSWORD_VALIDATORS = [
     {
         # username과 비밀번호가 유사한지 확인
@@ -103,27 +78,16 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'mainApp.User'
 
-# Internationalization
-# https://docs.djangoproject.com/en/4.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Seoul'
-
-# 번역 시스템 활성화 여부
-USE_I18N = True
-
-# DB 저장되는  정보 한국 시간대로 사용하려면 false로 지정
-USE_TZ = False
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
+USE_I18N = True #번역 시스템 활성화 여부
+USE_TZ = False # DB 저장되는  정보 한국 시간대로 사용하려면 false로 지정
 
 STATIC_URL = 'static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [STATIC_DIR, ]
+STATIC_ROOT = os.path.join(ROOT_DIR, '.static_root')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
