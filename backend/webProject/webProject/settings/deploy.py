@@ -10,7 +10,7 @@ WSGI_APPLICATION = 'webProject.wsgi.deploy.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'whattoeat_db',
         'USER': config_secret_deploy['django']['databases']['user'],
         'PASSWORD': config_secret_deploy['django']['databases']['password'],
         'HOST': config_secret_deploy['django']['databases']['host'],

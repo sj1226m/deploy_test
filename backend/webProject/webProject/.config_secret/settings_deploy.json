@@ -2,10 +2,13 @@
     "django":{
         "allowed_hosts":[
             "localhost",
+            "127.0.0.1",
             ".ap-northeast-2.compute.amazonaws.com"
         ],
         "databases":{
-            
+            "host": "localhost",
+            "user": "admin",
+            "password": "admin"
         }
     }
 }
